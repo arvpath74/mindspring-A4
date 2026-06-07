@@ -1,0 +1,114 @@
+/*
+	Styles to apply when the user prints the page
+	Removes navigation and interactive elements; simplifies layout for readability
+*/
+
+/* use of media query that html pages pick up to apply the correct style sheet*/
+@media print {
+
+/* Hide top navigation – not relevant in print */
+
+/* use of !important rule to ensure no applied styles conflict with the print layout */
+
+.navbar {
+	display: none !important;
+}
+
+/* Reset the layout of the body and any styling that won't work with the print view */
+body {
+	background-color: white !important; 
+	color: black !important;
+	margin: 0 !important; 
+	padding: 0 !important;
+	
+	width: 100% !important;
+	max-width: 100% !important;
+	min-width: 100% !important;
+	display: block !important;
+	float: none !important;
+}
+
+/* Hide the tiles on the home page that are used for navigation, show a welcome message in it's place */
+.nav-row {
+	display: none;
+}
+
+.print-only-welcome {
+	display: block;
+}
+
+/* hide the case study image tiles */
+.case-studies img {
+	display: none !important;
+}
+
+
+
+
+/* the following tags reformat the case studies so they are laid out vertically in a print friendly format */
+.case-studies {
+	display: block !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	grid-template-columns: none !important;
+	grid-template-rows: none !important;
+	grid-column: auto !important;
+	grid-row: auto !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.case-study-tile {
+	border-style: none;
+	display: flex !important;
+	flex-direction: column;
+	width: 100% !important;
+	max-width: 100% !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	margin-top: 0 !important;
+	margin-bottom: 30px !important; 
+	padding: 0 !important;
+	page-break-inside: avoid;
+	break-inside: avoid;		
+}
+
+/* reformat the figcaption in the figure tag to be used as headings for the case studies. 
+Use the order with the flex to ensure the fig caption appears above the span, contrary to the ordering of the elements*/
+.case-study-tile figcaption {
+	order: 1;
+	display: block !important;
+	font-size: 1.35em !important;
+	font-weight: bold !important;
+	margin-top: 20px !important;
+	margin-bottom: 8px !important;
+	color: #000000 !important;
+}
+.case-study-tile span {
+	order: 2;
+	display: block !important;
+	height: auto !important; 
+	overflow: visible !important; 
+	width: 100% !important;
+	max-width: 100% !important;
+	position: static !important;
+	padding: 0 !important;
+	margin: 0 !important; 
+	z-index: 2;
+}
+
+/* Reformats the company blurb on the about.html page so that the width of the screen is utilised */
+#companystory {
+	display: block !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	
+}
+
+.value-list {
+	display: block !important;
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+}
