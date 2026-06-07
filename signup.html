@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Arvind Sampath">
+    <meta name="description" content="MindSpring newsletter signup">
+    <meta name="keywords" content="mental health, newsletter">
+
+    
+    <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="stylesheet" href="./css/print.css" media="print">
+
+    <!-- Javascript is stored externally -->
+    <script src="./js/script.js"></script>
+
+    <title>MindSpring Collective - Newsletter Signup</title>
+    <link rel="icon" type="image/x-icon" href="./images/about.png">
+</head>
+
+<!-- Onload welcome message -->
+<body onload="welcomeMessage()">
+
+
+<nav class="navbar">
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+
+        <li class="dropdown">
+            <a href="#">Skills</a>
+            <ul class="dropdown-content">
+                <li><a href="./webskills.html">Web Development</a></li>
+                <li><a href="./communication.html">Communication</a></li>
+                <li><a href="./problemsolving.html">Problem Solving</a></li>
+                <li><a href="./teamwork.html">Teamwork</a></li>
+            </ul>
+        </li>
+
+        <li><a href="./resume.html">Resume</a></li>
+    </ul>
+</nav>
+
+
+<div class="logo-div">
+    <img src="./images/about.png" alt="Logo" class="logo-image">
+    <div class="headings">
+        <h1>MindSpring Collective</h1>
+        <h2>Newsletter Signup</h2>
+    </div>
+</div>
+
+
+<p class="skills-text">
+    Please complete the form below to sign up for the MindSpring Collective newsletter.
+    Fields marked with * are required.
+</p>
+
+<!-- HTML for the form -->
+<form method="post" action="process.html" onsubmit="return validateForm()">
+
+
+<div class="signup-form-row">
+
+<!-- put the form in a div so that the fields can appear aligned horizontally -->
+  <div class="signup-form">
+    <label for="firstName">First Name *</label>
+    <input type="text" id="firstName" name="firstName" maxlength="60">
+  </div>
+
+  <div class="signup-form">
+    <label for="lastName">Last Name *</label>
+    <input type="text" id="lastName" name="lastName" maxlength="60">
+  </div>
+
+  <div class="signup-form">
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="email" maxlength="60">
+  </div>
+</div>
+    <!-- Age Range -->
+    <label>Age Range:</label><br>
+    <input type="radio" name="age" value="15-25"> 15–25<br>
+    <input type="radio" name="age" value="26-35"> 26–35<br>
+    <input type="radio" name="age" value="36-45"> 36–45<br>
+    <input type="radio" name="age" value="46-55"> 46–55<br>
+    <input type="radio" name="age" value="55+"> 55+<br><br>
+
+    <!-- Services -->
+    <label>Services of Interest:</label><br>
+    <input type="checkbox" name="services" value="telehealth"> Telehealth Counselling<br>
+    <input type="checkbox" name="services" value="cbt"> CBT Programs<br>
+    <input type="checkbox" name="services" value="community"> Peer Support Community<br>
+    <input type="checkbox" name="services" value="tools"> Wellbeing Tracking Tools<br>
+    <input type="checkbox" name="services" value="education"> Mental Health Education<br><br>
+
+    <!-- Text Area -->
+    <label for="comments">Additional Comments:</label><br>
+    <textarea id="comments" name="comments" cols="60" rows="3"></textarea><br><br>
+
+    <!-- Buttons -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+</form>
+
+<!-- Footer -->
+<footer>
+    <p>
+        &copy; 2026 MindSpring Collective. All rights reserved.
+        Contact <a href="mailto:arvpath@gmail.com">arvpath@gmail.com</a>
+    </p>
+</footer>
+
+</body>
+</html>
